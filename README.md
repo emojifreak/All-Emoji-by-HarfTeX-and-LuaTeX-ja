@@ -4,7 +4,7 @@ LaTeX files listing all emoji in Unicode 12.0 by
 * [HarfLaTeX](https://github.com/khaledhosny/harftex), and
 * [HarfLaTeX](https://github.com/khaledhosny/harftex) + LuaTeX-ja.
 
-Compilation of LaTeX sources into PDFs requires the latest versions of Segoe UI Emoji and [Noto Color Emoji](https://github.com/googlefonts/noto-emoji).
+Compilation of LaTeX sources into PDFs requires the latest versions of Segoe UI Emoji and [Noto Color Emoji](https://github.com/googlefonts/noto-emoji), otherwise newer emoji are missing in the generated PDFs.
 
 Easier ways to install HarfLaTeX are uses of
 
