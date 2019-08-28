@@ -1319,8 +1319,10 @@
 "1FA94,
 "1FA95}
 
-\newcommand{\fontA}[1]{{\ltjsetparameter{jacharrange={-33}}\fontspec[RawFeature={mode=harf,dist,ccmp}]{Segoe UI Emoji} #1\ltjsetparameter{jacharrange={+33}}}}
-\newcommand{\fontB}[1]{{\ltjsetparameter{jacharrange={-33}}\fontspec[RawFeature={mode=harf,dist,ccmp}]{Noto Color Emoji} #1\ltjsetparameter{jacharrange={+33}}}}
+\ltjsetparameter{jacharrange={-33}}
+\setmainfont[RawFeature={mode=harf,+ccmp}]{Segoe UI Symbol}
+\newcommand{\fontA}[1]{{\fontspec[RawFeature={mode=harf,dist,ccmp}]{Segoe UI Emoji} #1}}
+\newcommand{\fontB}[1]{{\fontspec[RawFeature={mode=harf,dist,ccmp}]{Noto Color Emoji} #1}}
 \usepackage{longtable}
 \usepackage[luatex,margin=7mm]{geometry}
 
