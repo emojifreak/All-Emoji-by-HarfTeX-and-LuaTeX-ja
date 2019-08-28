@@ -1,17 +1,17 @@
 % List all emoji in HarfLaTeX + LuaTeX-ja
-% Build from https://unicode.org/emoji/charts/emoji-list.html
+% Built from https://unicode.org/emoji/charts/emoji-list.html
 
 \RequirePackage{harfload}
 \documentclass[a4paper,12pt]{ltjarticle}
 \usepackage{luatexja-fontspec}
-\usepackage[noto-otf]{luatexja-preset} % Use the Noto CJK as Japanese font
+%\usepackage[noto-otf]{luatexja-preset} % Use the Noto CJK as Japanese font
 %\usepackage[bizud]{luatexja-preset} % Use the Biz UD as Japanese font
 \usepackage{longtable}
 \usepackage[luatex,margin=7mm]{geometry}
 
 % 以下で絵文字に関連するすべて含む文字クラスを定義している
 % The below defines a character class in LuaTeX-ja containing all emoji.
-\ltjdefcharrange{9}{"00A9,
+\ltjdefcharrange{33}{"00A9,
 "00AE,
 "200D,
 "203C,
@@ -1319,16 +1319,15 @@
 "1FA94,
 "1FA95}
 
-%\ltjsetparameter{jacharrange={-9}}
-\newcommand{\fontA}[1]{{\ltjsetparameter{jacharrange={-9}}\fontspec[RawFeature={mode=harf,dist,ccmp}]{Segoe UI Emoji} #1\ltjsetparameter{jacharrange={+9}}}}
-\newcommand{\fontB}[1]{{\ltjsetparameter{jacharrange={-9}}\fontspec[RawFeature={mode=harf,dist,ccmp}]{Noto Color Emoji} #1\ltjsetparameter{jacharrange={+9}}}}
+\newcommand{\fontA}[1]{{\ltjsetparameter{jacharrange={-33}}\fontspec[RawFeature={mode=harf,dist,ccmp}]{Segoe UI Emoji} #1\ltjsetparameter{jacharrange={+33}}}}
+\newcommand{\fontB}[1]{{\ltjsetparameter{jacharrange={-33}}\fontspec[RawFeature={mode=harf,dist,ccmp}]{Noto Color Emoji} #1\ltjsetparameter{jacharrange={+33}}}}
 \usepackage{longtable}
 \usepackage[luatex,margin=7mm]{geometry}
 
 \begin{document}
 \noindent
 List all emoji in HarfLaTeX + LuaTeX-ja\\
-Build from https://unicode.org/emoji/charts/emoji-list.html
+Built from https://unicode.org/emoji/charts/emoji-list.html
 
 %\ltjgetparameter{jacharrange}{\ltjgetparameter{chartorange}{"200D}}
 \noindent
