@@ -1319,12 +1319,13 @@
 "1FA94,
 "1FA95}
 
+% The next line sets Emoji as non-Japanese characters in LuaTeX-ja
 \ltjsetparameter{jacharrange={-33}}
+
 \setmainfont[RawFeature={mode=harf,+ccmp}]{Segoe UI Symbol}
-\newcommand{\fontA}[1]{{\fontspec[RawFeature={mode=harf,dist,ccmp}]{Segoe UI Emoji} #1}}
-\newcommand{\fontB}[1]{{\fontspec[RawFeature={mode=harf,dist,ccmp}]{Noto Color Emoji} #1}}
-\usepackage{longtable}
-\usepackage[luatex,margin=7mm]{geometry}
+\newcommand{\fontA}[1]{{\fontspec[RawFeature={mode=harf,+dist,+ccmp}]{Segoe UI Emoji} #1}}
+\newcommand{\fontB}[1]{{\fontspec[RawFeature={mode=harf,+dist,+ccmp}]{Noto Color Emoji} #1}}
+
 
 \begin{document}
 \noindent
