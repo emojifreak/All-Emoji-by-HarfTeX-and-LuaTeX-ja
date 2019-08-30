@@ -192,6 +192,7 @@
 "E0074,
 "E0077,
 "E007F,
+"FE0E,
 "FE0F,
 "1F004,
 "1F0CF,
@@ -1320,17 +1321,19 @@
 "1FA95}
 
 % The next line sets Emoji as non-Japanese characters in LuaTeX-ja
+% 次の行は絵文字を欧文扱いとしている。そうしないと絵文字を和文フォントから探して表示しない
 \ltjsetparameter{jacharrange={-33}}
 
-\setmainfont[RawFeature={mode=harf,+ccmp}]{Segoe UI Symbol}
+\setmainfont[RawFeature={+ccmp}]{Segoe UI Symbol}
 \newcommand{\fontA}[1]{{\fontspec[RawFeature={mode=harf,+dist,+ccmp}]{Segoe UI Emoji} #1}}
 \newcommand{\fontB}[1]{{\fontspec[RawFeature={mode=harf,+dist,+ccmp}]{Noto Color Emoji} #1}}
 
 
 \begin{document}
 \noindent
-List all emoji in HarfLaTeX + LuaTeX-ja\\
-Built from https://unicode.org/emoji/charts/emoji-list.html
+List all emoji in Unicode 12.0 by HarfLaTeX + LuaTeX-ja\\
+Built from https://unicode.org/emoji/charts/emoji-list.html\\
+Twitter color SVG opentype font https://github.com/eosrei/twemoji-color-font/releases cannot be used in color as far as I know.
 
 %\ltjgetparameter{jacharrange}{\ltjgetparameter{chartorange}{"200D}}
 \noindent
@@ -2257,6 +2260,7 @@ Segoe&Noto&説明 Description\\\hline
 \fontA{❄}&\fontB{❄}&U+2744 ❄ snowflake\\
 \fontA{☃}&\fontB{☃}&U+2603 ☃ snowman\\
 \fontA{⛄}&\fontB{⛄}&U+26C4 ⛄ snowman without snow\\
+\fontA{⛇}&\fontB{⛇}&U+26C7 ⛇ black snowman (not recommended for general interchange)\\
 \fontA{☄}&\fontB{☄}&U+2604 ☄ comet\\
 \fontA{🔥}&\fontB{🔥}&U+1F525 🔥 fire\\
 \fontA{💧}&\fontB{💧}&U+1F4A7 💧 droplet\\
@@ -2704,7 +2708,7 @@ Segoe&Noto&説明 Description\\\hline
 \fontA{©}&\fontB{©}&U+00A9 © copyright\\
 \fontA{®}&\fontB{®}&U+00AE ® registered\\
 \fontA{™}&\fontB{™}&U+2122 ™ trade mark\\
-%\fontA{\#️⃣}&\fontB{\#️⃣}&U+0023 U+FE0F U+20E3 \#️⃣ keycap: #\\
+\fontA{\string#️⃣}&\fontB{\string#️⃣}&U+0023 U+FE0F U+20E3 \string#️⃣ keycap: \#\\
 \fontA{*️⃣}&\fontB{*️⃣}&U+002A U+FE0F U+20E3 *️⃣ keycap: *\\
 \fontA{0️⃣}&\fontB{0️⃣}&U+0030 U+FE0F U+20E3 0️⃣ keycap: 0\\
 \fontA{1️⃣}&\fontB{1️⃣}&U+0031 U+FE0F U+20E3 1️⃣ keycap: 1\\
