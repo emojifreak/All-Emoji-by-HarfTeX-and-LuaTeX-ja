@@ -1,9 +1,13 @@
 % 以下で絵文字に関連するすべて含む文字クラスを定義している
 % The below defines a character class in LuaTeX-ja containing all emoji.
 
+% Made b egrep -ow '[0-9A-F]{4,6}' emoji-test.txt | grep -v ^00 | sort  -u
+% emoji-test.txt is from https://unicode.org/Public/emoji/12.1/
+
 \ltjdefcharrange{33}{"00A9,
 "00AE,
 "200D,
+"2019,
 "203C,
 "2049,
 "20E3,
@@ -20,6 +24,7 @@
 "231A,
 "231B,
 "2328,
+"2398,
 "23CF,
 "23E9,
 "23EA,
@@ -170,18 +175,9 @@
 "2B55,
 "3030,
 "303D,
+"3178,
 "3297,
 "3299,
-"E0062,
-"E0063,
-"E0065,
-"E0067,
-"E006C,
-"E006E,
-"E0073,
-"E0074,
-"E0077,
-"E007F,
 "FE0E,
 "FE0F,
 "1F004,
@@ -483,6 +479,11 @@
 "1F3F8,
 "1F3F9,
 "1F3FA,
+"1F3FB,
+"1F3FC,
+"1F3FD,
+"1F3FE,
+"1F3FF,
 "1F400,
 "1F401,
 "1F402,
@@ -1308,7 +1309,17 @@
 "1FA92,
 "1FA93,
 "1FA94,
-"1FA95}
+"1FA95,
+"E0062,
+"E0063,
+"E0065,
+"E0067,
+"E006C,
+"E006E,
+"E0073,
+"E0074,
+"E0077,
+"E007F}
 
 % The next line sets Emoji as non-Japanese characters in LuaTeX-ja
 % 次の行は絵文字を欧文扱いとしている。そうしないと絵文字を和文フォントから探して表示しない
