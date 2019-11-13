@@ -1,15 +1,11 @@
-LaTeX files listing all emoji in Unicode 12.0 by
+LaTeX files listing all emoji in Unicode 12.1 by LuaHBLaTeX + luaotfload.sty 3.11
 
-* LuaLaTeX,
-* [HarfLaTeX](https://github.com/khaledhosny/harftex), and
-* [HarfLaTeX](https://github.com/khaledhosny/harftex) + LuaTeX-ja.
+Compilation of LaTeX sources into PDFs requires the latest versions of Segoe UI Emoji (in Windows), [Noto Color Emoji](https://github.com/googlefonts/noto-emoji) and a [TTF version of Twitter Emoji](https://github.com/mozilla/twemoji-colr), otherwise newer emoji are missing in the generated PDFs.
 
-Compilation of LaTeX sources into PDFs requires the latest versions of Segoe UI Emoji (in Windows), [Noto Color Emoji](https://github.com/googlefonts/noto-emoji) and a [TTF version of Twitter Emoji](https://github.com/mozilla/twemoji-colr), otherwise newer emoji are missing in the generated PDFs. They also use [BXcoloremoji](https://github.com/zr-tex8r/BXcoloremoji) for Twitter Emoji.
-
-Easier ways to install HarfLaTeX are uses of
+Easier ways to install LuaHBLaTeX are uses of
 
 * [TeX Live Contrib Area](https://contrib.texlive.info/), and
-* [W32TeX](http://w32tex.org/index.html) which includes HarfLaTeX recently.
+* [W32TeX](http://w32tex.org/index.html).
 
 One can easily use emoji in a presentation by **LuaLaTeX** like the below. LuaLaTeX can handle color fonts with **RawFeature={+colr}**
 
