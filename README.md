@@ -6,11 +6,12 @@ Note that TeXLive 2019 final and TeXLive 2020 include Noto Color Emoji and Twitt
 One can easily use emoji in a presentation by **LuaLaTeX** like the below. LuaLaTeX can handle color fonts with **RawFeature={+colr}**
 
 ```
-%\RequirePackage{harfload}
+\RequirePackage[TU]{fontenc}
+\RequirePackage{fix-cm}
+\RequirePackage{lmodern}
 \documentclass[luatex,unicode]{beamer}
 \usepackage{fontspec}
 \setsansfont{Segoe UI Emoji}[
-%  RawFeature={mode=harf;+dist;+ccmp},
   RawFeature={+colr;+dist;+ccmp},
   BoldFont={Segoe UI Bold},
   ItalicFont={Segoe UI Italic},
