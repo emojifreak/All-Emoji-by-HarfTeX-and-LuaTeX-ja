@@ -1,6 +1,6 @@
 LaTeX files listing all emoji in Unicode 12.1 by lualatex-dev + luaotfload.sty 3.11
 
-Compilation of LaTeX sources into PDFs requires the latest versions of Segoe UI Emoji (in Windows), [Noto Color Emoji](https://github.com/googlefonts/noto-emoji) and a [TTF version of Twitter Emoji](https://github.com/mozilla/twemoji-colr), otherwise newer emoji are missing in the generated PDFs.
+Compilation of LaTeX sources into PDFs requires the latest versions of Segoe UI Emoji (in Windows), [Noto Color Emoji](https://github.com/googlefonts/noto-emoji) and a [TTF version of Twitter Emoji](https://github.com/mozilla/twemoji-colr), otherwise newer emoji are missing in the generated PDFs. Note also that TeXLive 2019 final and TeXLive 2020 include Noto Color Emoji and Twitter Emoji.
 
 
 
