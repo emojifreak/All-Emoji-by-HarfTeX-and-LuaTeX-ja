@@ -2,6 +2,9 @@
 % Compile this with luahblatex + luaotfload 3.12 or newer and
 % lualatex-dev (This is LuaHBTeX, Version 1.11.2 (TeX Live 2020/dev))
 
+\RequirePackage[TU]{fontenc}
+\RequirePackage{fix-cm}
+\RequirePackage{lmodern}
 \documentclass{article}
 \usepackage{longtable}
 \usepackage[luatex,margin=7mm]{geometry}
@@ -10,9 +13,9 @@
 \newcommand{\mylinecount}{\stepcounter{myline}\arabic{myline}}
 %\newcommand{\coloremoji}[1]{}
 
-\font\fontA={[./TwemojiMozilla.ttf]:mode=harf;+ccmp;+dist;}
+\font\fontA={name:Twemoji Mozilla:mode=harf;+ccmp;+dist;}
 \font\fontB={name:Segoe UI Emoji:mode=harf;+ccmp;+dist;}
-\font\fontC={[./NotoColorEmoji.ttf]:mode=harf;+ccmp;+dist;}
+\font\fontC={name:Noto Color Emoji:mode=harf;+ccmp;+dist;}
 
 \begin{document}
 \noindent
